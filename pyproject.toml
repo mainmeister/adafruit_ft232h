@@ -6,6 +6,7 @@ dependencies = [
     "adafruit-blinka",
     "adafruit-circuitpython-charlcd",
     "pygame>=2.6.1",
+    "smbus>=1.1.post2",
 ]
 
 [tool.uv.sources]

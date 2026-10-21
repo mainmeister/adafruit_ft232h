@@ -42,18 +42,18 @@ def initialize_display():
              print("Hint: Check wiring and ensure D1 and D2 are jumpered if using FT232H.")
         raise
 
-def lprint(lcd, message):
+def lprint(lcd, message) -> None:
     print(message)
     lcd.clear()
     lcd.message = message
 
-def timed_print(lcd, messages, delay=1):
+def timed_print(lcd, messages, delay: int=1) -> None:
     for message in messages:
         lprint(lcd, message)
         time.sleep(delay)
     lcd.clear()
 
-def main():
+def main() -> None:
     try:
         lcd = initialize_display()
         messages = ["Hello World!", "This is", "a test"]

@@ -2,12 +2,13 @@ import time
 import board
 import busio
 from adafruit_character_lcd.character_lcd_i2c import Character_LCD_I2C
+from LCD import LCD
 
-def lprint(lcd, message):
+def lprint(lcd, message) -> None:
     print(message)
     lcd.message = message
 
-def main():
+def main() -> None:
     print(f"Board ID: {board.board_id}")
     try:
         i2c = board.I2C()  # uses board.SCL and board.SDA
